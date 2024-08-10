@@ -1,0 +1,1062 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E797265-3658-4ED0-9D2D-B5B7401FB37E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Employee</RootNamespace>
+    <AssemblyName>Employee</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Guest\css\vertical-layout-light\style.css" />
+    <Content Include="Guest\EmployeeReg.aspx" />
+    <Content Include="Guest\employeeview.aspx" />
+    <Content Include="Guest\filtering.aspx" />
+    <Content Include="Guest\GuestHome.aspx" />
+    <Content Include="Guest\images\auth\lockscreen-bg.jpg" />
+    <Content Include="Guest\images\auth\login-bg.jpg" />
+    <Content Include="Guest\images\auth\register-bg.jpg" />
+    <Content Include="Guest\images\carousel\banner_1.jpg" />
+    <Content Include="Guest\images\carousel\banner_10.jpg" />
+    <Content Include="Guest\images\carousel\banner_11.jpg" />
+    <Content Include="Guest\images\carousel\banner_12.jpg" />
+    <Content Include="Guest\images\carousel\banner_2.jpg" />
+    <Content Include="Guest\images\carousel\banner_3.jpg" />
+    <Content Include="Guest\images\carousel\banner_4.jpg" />
+    <Content Include="Guest\images\carousel\banner_5.jpg" />
+    <Content Include="Guest\images\carousel\banner_6.jpg" />
+    <Content Include="Guest\images\carousel\banner_7.jpg" />
+    <Content Include="Guest\images\carousel\banner_8.jpg" />
+    <Content Include="Guest\images\carousel\banner_9.jpg" />
+    <Content Include="Guest\images\demo\boxed-layout.jpg" />
+    <Content Include="Guest\images\demo\calendar.jpg" />
+    <Content Include="Guest\images\demo\compact-menu.jpg" />
+    <Content Include="Guest\images\demo\dark-sidebar.jpg" />
+    <Content Include="Guest\images\demo\email.jpg" />
+    <Content Include="Guest\images\demo\fixed-menu.jpg" />
+    <Content Include="Guest\images\demo\horizontal-menu-dark.jpg" />
+    <Content Include="Guest\images\demo\horizontal-menu-light.jpg" />
+    <Content Include="Guest\images\demo\icon-menu.jpg" />
+    <Content Include="Guest\images\demo\login.jpg" />
+    <Content Include="Guest\images\demo\portfolio.jpg" />
+    <Content Include="Guest\images\demo\pricing.jpg" />
+    <Content Include="Guest\images\demo\toggle-menu.jpg" />
+    <Content Include="Guest\images\demo\toggle-overlay-menu.jpg" />
+    <Content Include="Guest\images\demo\vertical-dark.jpg" />
+    <Content Include="Guest\images\demo\vertical-default.jpg" />
+    <Content Include="Guest\images\faces\face1.jpg" />
+    <Content Include="Guest\images\faces\face10.jpg" />
+    <Content Include="Guest\images\faces\face11.jpg" />
+    <Content Include="Guest\images\faces\face12.jpg" />
+    <Content Include="Guest\images\faces\face13.jpg" />
+    <Content Include="Guest\images\faces\face14.jpg" />
+    <Content Include="Guest\images\faces\face15.jpg" />
+    <Content Include="Guest\images\faces\face16.jpg" />
+    <Content Include="Guest\images\faces\face17.jpg" />
+    <Content Include="Guest\images\faces\face18.jpg" />
+    <Content Include="Guest\images\faces\face19.jpg" />
+    <Content Include="Guest\images\faces\face2.jpg" />
+    <Content Include="Guest\images\faces\face20.jpg" />
+    <Content Include="Guest\images\faces\face21.jpg" />
+    <Content Include="Guest\images\faces\face22.jpg" />
+    <Content Include="Guest\images\faces\face23.jpg" />
+    <Content Include="Guest\images\faces\face24.jpg" />
+    <Content Include="Guest\images\faces\face25.jpg" />
+    <Content Include="Guest\images\faces\face26.jpg" />
+    <Content Include="Guest\images\faces\face27.jpg" />
+    <Content Include="Guest\images\faces\face3.jpg" />
+    <Content Include="Guest\images\faces\face4.jpg" />
+    <Content Include="Guest\images\faces\face5.jpg" />
+    <Content Include="Guest\images\faces\face6.jpg" />
+    <Content Include="Guest\images\faces\face7.jpg" />
+    <Content Include="Guest\images\faces\face8.jpg" />
+    <Content Include="Guest\images\faces\face9.jpg" />
+    <Content Include="Guest\images\favicon.png" />
+    <Content Include="Guest\images\file-icons\128\001-interface-1.png" />
+    <Content Include="Guest\images\file-icons\128\002-tool.png" />
+    <Content Include="Guest\images\file-icons\128\003-interface.png" />
+    <Content Include="Guest\images\file-icons\128\004-folder-1.png" />
+    <Content Include="Guest\images\file-icons\128\005-database.png" />
+    <Content Include="Guest\images\file-icons\128\006-record.png" />
+    <Content Include="Guest\images\file-icons\128\007-folder.png" />
+    <Content Include="Guest\images\file-icons\128\008-archive.png" />
+    <Content Include="Guest\images\file-icons\256\001-interface-1.png" />
+    <Content Include="Guest\images\file-icons\256\002-tool.png" />
+    <Content Include="Guest\images\file-icons\256\003-interface.png" />
+    <Content Include="Guest\images\file-icons\256\004-folder-1.png" />
+    <Content Include="Guest\images\file-icons\256\005-database.png" />
+    <Content Include="Guest\images\file-icons\256\006-record.png" />
+    <Content Include="Guest\images\file-icons\256\007-folder.png" />
+    <Content Include="Guest\images\file-icons\256\008-archive.png" />
+    <Content Include="Guest\images\file-icons\512\001-interface-1.png" />
+    <Content Include="Guest\images\file-icons\512\002-tool.png" />
+    <Content Include="Guest\images\file-icons\512\003-interface.png" />
+    <Content Include="Guest\images\file-icons\512\004-folder-1.png" />
+    <Content Include="Guest\images\file-icons\512\005-database.png" />
+    <Content Include="Guest\images\file-icons\512\006-record.png" />
+    <Content Include="Guest\images\file-icons\512\007-folder.png" />
+    <Content Include="Guest\images\file-icons\512\008-archive.png" />
+    <Content Include="Guest\images\file-icons\64\001-interface-1.png" />
+    <Content Include="Guest\images\file-icons\64\002-tool.png" />
+    <Content Include="Guest\images\file-icons\64\003-interface.png" />
+    <Content Include="Guest\images\file-icons\64\004-folder-1.png" />
+    <Content Include="Guest\images\file-icons\64\005-database.png" />
+    <Content Include="Guest\images\file-icons\64\006-record.png" />
+    <Content Include="Guest\images\file-icons\64\007-folder.png" />
+    <Content Include="Guest\images\file-icons\64\008-archive.png" />
+    <Content Include="Guest\images\file-icons\flag\flag.png" />
+    <Content Include="Guest\images\lightbox\play-button.png" />
+    <Content Include="Guest\images\lightbox\thumb-v-v-1.jpg" />
+    <Content Include="Guest\images\lightbox\thumb-v-v-2.jpg" />
+    <Content Include="Guest\images\lightbox\thumb-v-y-1.jpg" />
+    <Content Include="Guest\images\lightbox\thumb-v-y-2.jpg" />
+    <Content Include="Guest\images\logo-dark.svg" />
+    <Content Include="Guest\images\logo-mini.svg" />
+    <Content Include="Guest\images\logo.svg" />
+    <Content Include="Guest\images\samples\1280x768\1.jpg" />
+    <Content Include="Guest\images\samples\1280x768\10.jpg" />
+    <Content Include="Guest\images\samples\1280x768\11.jpg" />
+    <Content Include="Guest\images\samples\1280x768\12.jpg" />
+    <Content Include="Guest\images\samples\1280x768\13.jpg" />
+    <Content Include="Guest\images\samples\1280x768\14.jpg" />
+    <Content Include="Guest\images\samples\1280x768\15.jpg" />
+    <Content Include="Guest\images\samples\1280x768\2.jpg" />
+    <Content Include="Guest\images\samples\1280x768\3.jpg" />
+    <Content Include="Guest\images\samples\1280x768\4.jpg" />
+    <Content Include="Guest\images\samples\1280x768\5.jpg" />
+    <Content Include="Guest\images\samples\1280x768\6.jpg" />
+    <Content Include="Guest\images\samples\1280x768\7.jpg" />
+    <Content Include="Guest\images\samples\1280x768\8.jpg" />
+    <Content Include="Guest\images\samples\1280x768\9.jpg" />
+    <Content Include="Guest\images\samples\300x300\1.jpg" />
+    <Content Include="Guest\images\samples\300x300\10.jpg" />
+    <Content Include="Guest\images\samples\300x300\11.jpg" />
+    <Content Include="Guest\images\samples\300x300\12.jpg" />
+    <Content Include="Guest\images\samples\300x300\13.jpg" />
+    <Content Include="Guest\images\samples\300x300\14.jpg" />
+    <Content Include="Guest\images\samples\300x300\15.jpg" />
+    <Content Include="Guest\images\samples\300x300\2.jpg" />
+    <Content Include="Guest\images\samples\300x300\3.jpg" />
+    <Content Include="Guest\images\samples\300x300\4.jpg" />
+    <Content Include="Guest\images\samples\300x300\5.jpg" />
+    <Content Include="Guest\images\samples\300x300\6.jpg" />
+    <Content Include="Guest\images\samples\300x300\7.jpg" />
+    <Content Include="Guest\images\samples\300x300\8.jpg" />
+    <Content Include="Guest\images\samples\300x300\9.jpg" />
+    <Content Include="Guest\images\sprites\blue.png" />
+    <Content Include="Guest\images\sprites\dark.png" />
+    <Content Include="Guest\images\sprites\flag.png" />
+    <Content Include="Guest\images\sprites\green.png" />
+    <Content Include="Guest\images\sprites\jsgrid-icons.png" />
+    <Content Include="Guest\images\sprites\red.png" />
+    <Content Include="Guest\images\sprites\yellow.png" />
+    <Content Include="Guest\js\ace.js" />
+    <Content Include="Guest\js\alerts.js" />
+    <Content Include="Guest\js\avgrund.js" />
+    <Content Include="Guest\js\bootstrap-table.js" />
+    <Content Include="Guest\js\bt-maxLength.js" />
+    <Content Include="Guest\js\c3.js" />
+    <Content Include="Guest\js\calendar.js" />
+    <Content Include="Guest\js\chart.js" />
+    <Content Include="Guest\js\chartist.js" />
+    <Content Include="Guest\js\circle-progress.js" />
+    <Content Include="Guest\js\clipboard.js" />
+    <Content Include="Guest\js\codeEditor.js" />
+    <Content Include="Guest\js\codemirror.js" />
+    <Content Include="Guest\js\context-menu.js" />
+    <Content Include="Guest\js\dashboard.js" />
+    <Content Include="Guest\js\data-table.js" />
+    <Content Include="Guest\js\db.js" />
+    <Content Include="Guest\js\demo.js" />
+    <Content Include="Guest\js\desktop-notification.js" />
+    <Content Include="Guest\js\dragula.js" />
+    <Content Include="Guest\js\dropify.js" />
+    <Content Include="Guest\js\dropzone.js" />
+    <Content Include="Guest\js\editorDemo.js" />
+    <Content Include="Guest\js\file-upload.js" />
+    <Content Include="Guest\js\flot-chart.js" />
+    <Content Include="Guest\js\form-addons.js" />
+    <Content Include="Guest\js\form-repeater.js" />
+    <Content Include="Guest\js\form-validation.js" />
+    <Content Include="Guest\js\formpickers.js" />
+    <Content Include="Guest\js\google-charts.js" />
+    <Content Include="Guest\js\google-maps.js" />
+    <Content Include="Guest\js\hoverable-collapse.js" />
+    <Content Include="Guest\js\ion-range-slider.js" />
+    <Content Include="Guest\js\jq.tablesort.js" />
+    <Content Include="Guest\js\jquery-file-upload.js" />
+    <Content Include="Guest\js\js-grid.js" />
+    <Content Include="Guest\js\just-gage.js" />
+    <Content Include="Guest\js\light-gallery.js" />
+    <Content Include="Guest\js\listify.js" />
+    <Content Include="Guest\js\mapael.js" />
+    <Content Include="Guest\js\mapael_example_1.js" />
+    <Content Include="Guest\js\mapael_example_2.js" />
+    <Content Include="Guest\js\maps.js" />
+    <Content Include="Guest\js\modal-demo.js" />
+    <Content Include="Guest\js\morris.js" />
+    <Content Include="Guest\js\no-ui-slider.js" />
+    <Content Include="Guest\js\off-canvas.js" />
+    <Content Include="Guest\js\owl-carousel.js" />
+    <Content Include="Guest\js\paginate.js" />
+    <Content Include="Guest\js\popover.js" />
+    <Content Include="Guest\js\profile-demo.js" />
+    <Content Include="Guest\js\progress-bar.js" />
+    <Content Include="Guest\js\rickshaw.js" />
+    <Content Include="Guest\js\select2.js" />
+    <Content Include="Guest\js\settings.js" />
+    <Content Include="Guest\js\sparkline.js" />
+    <Content Include="Guest\js\tablesorter.js" />
+    <Content Include="Guest\js\tabs.js" />
+    <Content Include="Guest\js\template.js" />
+    <Content Include="Guest\js\tight-grid.js" />
+    <Content Include="Guest\js\toastDemo.js" />
+    <Content Include="Guest\js\todolist.js" />
+    <Content Include="Guest\js\tooltips.js" />
+    <Content Include="Guest\js\typeahead.js" />
+    <Content Include="Guest\js\wizard.js" />
+    <Content Include="Guest\js\x-editable.js" />
+    <Content Include="Guest\pages\charts\chartjs.html" />
+    <Content Include="Guest\pages\documentation\documentation.html" />
+    <Content Include="Guest\pages\forms\basic_elements.html" />
+    <Content Include="Guest\pages\icons\mdi.html" />
+    <Content Include="Guest\pages\samples\error-404.html" />
+    <Content Include="Guest\pages\samples\error-500.html" />
+    <Content Include="Guest\pages\samples\login.html" />
+    <Content Include="Guest\pages\samples\register.html" />
+    <Content Include="Guest\pages\tables\basic-table.html" />
+    <Content Include="Guest\pages\ui-features\buttons.html" />
+    <Content Include="Guest\pages\ui-features\dropdowns.html" />
+    <Content Include="Guest\pages\ui-features\typography.html" />
+    <Content Include="Guest\partials\_footer.html" />
+    <Content Include="Guest\partials\_navbar.html" />
+    <Content Include="Guest\partials\_settings-panel.html" />
+    <Content Include="Guest\partials\_sidebar.html" />
+    <Content Include="Guest\sort.aspx" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ace.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-beautify.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-code_lens.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-elastic_tabstops_lite.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-emmet.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-error_marker.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-keybinding_menu.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-language_tools.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-linking.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-modelist.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-options.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-prompt.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-rtl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-searchbox.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-settings_menu.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-spellcheck.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-split.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-static_highlight.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-statusbar.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-textarea.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-themelist.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\ext-whitespace.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\keybinding-emacs.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\keybinding-sublime.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\keybinding-vim.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\keybinding-vscode.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-abap.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-abc.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-actionscript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-ada.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-alda.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-apache_conf.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-apex.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-applescript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-aql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-asciidoc.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-asl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-assembly_x86.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-autohotkey.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-batchfile.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-c9search.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-cirru.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-clojure.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-cobol.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-coffee.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-coldfusion.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-crystal.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-csharp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-csound_document.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-csound_orchestra.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-csound_score.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-csp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-css.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-curly.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-c_cpp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-d.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-dart.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-diff.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-django.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-dockerfile.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-dot.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-drools.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-edifact.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-eiffel.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-ejs.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-elixir.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-elm.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-erlang.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-forth.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-fortran.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-fsharp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-fsl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-ftl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-gcode.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-gherkin.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-gitignore.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-glsl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-gobstones.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-golang.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-graphqlschema.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-groovy.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-haml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-handlebars.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-haskell.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-haskell_cabal.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-haxe.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-hjson.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-html.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-html_elixir.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-html_ruby.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-ini.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-io.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-jack.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-jade.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-java.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-javascript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-json.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-json5.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-jsoniq.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-jsp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-jssm.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-jsx.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-julia.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-kotlin.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-latex.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-less.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-liquid.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-lisp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-livescript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-logiql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-logtalk.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-lsl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-lua.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-luapage.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-lucene.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-makefile.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-markdown.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-mask.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-matlab.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-maze.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-mediawiki.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-mel.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-mixal.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-mushcode.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-mysql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-nginx.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-nim.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-nix.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-nsis.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-nunjucks.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-objectivec.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-ocaml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-pascal.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-perl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-perl6.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-pgsql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-php.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-php_laravel_blade.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-pig.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-plain_text.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-powershell.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-praat.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-prisma.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-prolog.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-properties.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-protobuf.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-puppet.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-python.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-qml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-r.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-razor.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-rdoc.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-red.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-redshift.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-rhtml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-rst.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-ruby.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-rust.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-sass.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-scad.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-scala.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-scheme.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-scss.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-sh.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-sjs.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-slim.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-smarty.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-snippets.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-soy_template.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-space.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-sparql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-sql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-sqlserver.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-stylus.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-svg.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-swift.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-tcl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-terraform.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-tex.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-text.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-textile.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-toml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-tsx.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-turtle.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-twig.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-typescript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-vala.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-vbscript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-velocity.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-verilog.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-vhdl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-visualforce.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-wollok.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-xml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-xquery.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-yaml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\mode-zeek.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\abap.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\abc.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\actionscript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\ada.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\alda.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\apache_conf.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\apex.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\applescript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\aql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\asciidoc.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\asl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\assembly_x86.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\autohotkey.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\batchfile.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\c9search.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\cirru.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\clojure.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\cobol.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\coffee.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\coldfusion.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\crystal.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\csharp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\csound_document.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\csound_orchestra.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\csound_score.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\csp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\css.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\curly.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\c_cpp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\d.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\dart.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\diff.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\django.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\dockerfile.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\dot.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\drools.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\edifact.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\eiffel.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\ejs.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\elixir.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\elm.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\erlang.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\forth.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\fortran.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\fsharp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\fsl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\ftl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\gcode.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\gherkin.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\gitignore.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\glsl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\gobstones.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\golang.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\graphqlschema.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\groovy.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\haml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\handlebars.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\haskell.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\haskell_cabal.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\haxe.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\hjson.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\html.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\html_elixir.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\html_ruby.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\ini.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\io.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\jack.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\jade.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\java.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\javascript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\json.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\json5.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\jsoniq.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\jsp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\jssm.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\jsx.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\julia.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\kotlin.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\latex.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\less.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\liquid.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\lisp.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\livescript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\logiql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\logtalk.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\lsl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\lua.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\luapage.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\lucene.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\makefile.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\markdown.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\mask.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\matlab.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\maze.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\mediawiki.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\mel.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\mixal.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\mushcode.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\mysql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\nginx.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\nim.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\nix.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\nsis.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\nunjucks.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\objectivec.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\ocaml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\pascal.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\perl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\perl6.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\pgsql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\php.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\php_laravel_blade.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\pig.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\plain_text.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\powershell.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\praat.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\prisma.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\prolog.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\properties.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\protobuf.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\puppet.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\python.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\qml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\r.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\razor.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\rdoc.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\red.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\redshift.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\rhtml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\rst.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\ruby.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\rust.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\sass.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\scad.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\scala.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\scheme.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\scss.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\sh.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\sjs.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\slim.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\smarty.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\snippets.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\soy_template.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\space.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\sparql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\sql.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\sqlserver.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\stylus.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\svg.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\swift.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\tcl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\terraform.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\tex.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\text.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\textile.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\toml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\tsx.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\turtle.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\twig.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\typescript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\vala.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\vbscript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\velocity.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\verilog.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\vhdl.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\visualforce.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\wollok.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\xml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\xquery.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\yaml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\snippets\zeek.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-ambiance.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-chaos.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-chrome.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-clouds.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-clouds_midnight.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-cobalt.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-crimson_editor.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-dawn.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-dracula.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-dreamweaver.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-eclipse.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-github.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-gob.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-gruvbox.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-idle_fingers.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-iplastic.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-katzenmilch.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-kr_theme.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-kuroir.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-merbivore.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-merbivore_soft.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-monokai.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-mono_industrial.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-nord_dark.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-pastel_on_dark.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-solarized_dark.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-solarized_light.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-sqlserver.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-terminal.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-textmate.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-tomorrow.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-tomorrow_night.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-tomorrow_night_blue.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-tomorrow_night_bright.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-tomorrow_night_eighties.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-twilight.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-vibrant_ink.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\theme-xcode.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\worker-base.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\worker-coffee.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\worker-css.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\worker-html.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\worker-javascript.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\worker-json.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\worker-lua.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\worker-php.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\worker-xml.js" />
+    <Content Include="Guest\vendors\ace-builds\src-min\worker-xquery.js" />
+    <Content Include="Guest\vendors\chart.js\Chart.min.js" />
+    <Content Include="Guest\vendors\codemirror\ambiance.css" />
+    <Content Include="Guest\vendors\codemirror\codemirror.css" />
+    <Content Include="Guest\vendors\codemirror\codemirror.js" />
+    <Content Include="Guest\vendors\codemirror\javascript.js" />
+    <Content Include="Guest\vendors\codemirror\shell.js" />
+    <Content Include="Guest\vendors\css\vendor.bundle.base.css" />
+    <Content Include="Guest\vendors\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Guest\vendors\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Guest\vendors\jquery-file-upload\jquery.uploadfile.min.js" />
+    <Content Include="Guest\vendors\jquery-file-upload\uploadfile.css" />
+    <Content Include="Guest\vendors\jquery.avgrund\jquery.avgrund.min.js" />
+    <Content Include="Guest\vendors\jsgrid\jsgrid-theme.min.css" />
+    <Content Include="Guest\vendors\js\vendor.bundle.base.js" />
+    <Content Include="Guest\vendors\mdi\css\materialdesignicons.min.css" />
+    <Content Include="Guest\vendors\mdi\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="Guest\vendors\moment\moment.js" />
+    <Content Include="Guest\vendors\moment\moment.min.js" />
+    <Content Include="Guest\vendors\pwstabs\jquery.pwstabs.min.css" />
+    <Content Include="Guest\vendors\pwstabs\jquery.pwstabs.min.js" />
+    <Content Include="Guest\vendors\quill\quill.snow.css" />
+    <Content Include="Guest\vendors\select2\select2.min.css" />
+    <Content Include="Guest\vendors\select2\select2.min.js" />
+    <Content Include="Guest\vendors\simplemde\simplemde.min.css" />
+    <Content Include="Guest\vendors\tinymce\changelog.txt" />
+    <Content Include="Guest\vendors\tinymce\jquery.tinymce.js" />
+    <Content Include="Guest\vendors\tinymce\jquery.tinymce.min.js" />
+    <Content Include="Guest\vendors\tinymce\license.txt" />
+    <Content Include="Guest\vendors\tinymce\plugins\advlist\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\anchor\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\autolink\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\autoresize\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\autosave\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\bbcode\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\charmap\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\codesample\css\prism.css" />
+    <Content Include="Guest\vendors\tinymce\plugins\codesample\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\codesample\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\code\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\code\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\colorpicker\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\colorpicker\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\contextmenu\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\directionality\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\fullpage\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\fullscreen\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\help\img\logo.png" />
+    <Content Include="Guest\vendors\tinymce\plugins\help\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\help\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\hr\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\hr\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\imagetools\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\imagetools\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\image\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\image\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\importcss\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\insertdatetime\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\legacyoutput\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\link\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\link\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\lists\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\lists\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\media\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\media\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\nonbreaking\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\noneditable\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\pagebreak\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\paste\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\paste\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\preview\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\preview\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\print\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\print\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\save\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\save\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\searchreplace\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\spellchecker\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\tabfocus\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\table\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\table\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\template\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\template\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\textcolor\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\textpattern\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\textpattern\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\toc\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\toc\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\toc\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Guest\vendors\tinymce\plugins\visualblocks\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\visualchars\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\wordcount\index.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="Guest\vendors\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="Guest\vendors\tinymce\themes\inlite\index.js" />
+    <Content Include="Guest\vendors\tinymce\themes\inlite\theme.js" />
+    <Content Include="Guest\vendors\tinymce\themes\inlite\theme.min.js" />
+    <Content Include="Guest\vendors\tinymce\themes\modern\index.js" />
+    <Content Include="Guest\vendors\tinymce\themes\modern\theme.js" />
+    <Content Include="Guest\vendors\tinymce\themes\modern\theme.min.js" />
+    <Content Include="Guest\vendors\tinymce\tinymce.jquery.js" />
+    <Content Include="Guest\vendors\tinymce\tinymce.jquery.min.js" />
+    <Content Include="Guest\vendors\tinymce\tinymce.js" />
+    <Content Include="Guest\vendors\tinymce\tinymce.min.js" />
+    <Content Include="Guest\vendors\twbs-pagination\jquery.twbsPagination.min.js" />
+    <Content Include="Guest\vendors\typeahead.js\typeahead.bundle.min.js" />
+    <Content Include="Guest\vendors\typicons\typicons.css" />
+    <Content Include="Guest\vendors\typicons\typicons.svg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbOperation.cs" />
+    <Compile Include="Guest\EmployeeReg.aspx.cs">
+      <DependentUpon>EmployeeReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\EmployeeReg.aspx.designer.cs">
+      <DependentUpon>EmployeeReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\employeeview.aspx.cs">
+      <DependentUpon>employeeview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\employeeview.aspx.designer.cs">
+      <DependentUpon>employeeview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\filtering.aspx.cs">
+      <DependentUpon>filtering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\filtering.aspx.designer.cs">
+      <DependentUpon>filtering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\GuestHome.aspx.cs">
+      <DependentUpon>GuestHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\GuestHome.aspx.designer.cs">
+      <DependentUpon>GuestHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\GuestMaster.Master.cs">
+      <DependentUpon>GuestMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\GuestMaster.Master.designer.cs">
+      <DependentUpon>GuestMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\sort.aspx.cs">
+      <DependentUpon>sort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\sort.aspx.designer.cs">
+      <DependentUpon>sort.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Guest\GuestMaster.Master" />
+    <Content Include="Guest\css\maps\horizontal-layout-dark\style.css.map" />
+    <Content Include="Guest\css\maps\horizontal-layout-light\style.css.map" />
+    <Content Include="Guest\css\maps\horizontal-layout\style.css.map" />
+    <Content Include="Guest\css\maps\vertical-layout-dark\style.css.map" />
+    <Content Include="Guest\css\maps\vertical-layout-light\style.css.map" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Black.eot" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Black.ttf" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Black.woff" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Black.woff2" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Bold.eot" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Bold.ttf" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Bold.woff" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Bold.woff2" />
+    <Content Include="Guest\fonts\Poppins\Poppins-ExtraBold.eot" />
+    <Content Include="Guest\fonts\Poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Guest\fonts\Poppins\Poppins-ExtraBold.woff" />
+    <Content Include="Guest\fonts\Poppins\Poppins-ExtraBold.woff2" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Light.eot" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Light.ttf" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Light.woff" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Light.woff2" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Medium.eot" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Medium.ttf" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Medium.woff" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Medium.woff2" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Regular.eot" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Regular.ttf" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Regular.woff" />
+    <Content Include="Guest\fonts\Poppins\Poppins-Regular.woff2" />
+    <Content Include="Guest\fonts\Poppins\Poppins-SemiBold.eot" />
+    <Content Include="Guest\fonts\Poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Guest\fonts\Poppins\Poppins-SemiBold.woff" />
+    <Content Include="Guest\fonts\Poppins\Poppins-SemiBold.woff2" />
+    <Content Include="Guest\vendors\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Guest\vendors\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Guest\vendors\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Guest\vendors\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Guest\vendors\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Guest\vendors\mdi\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Guest\vendors\mdi\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Guest\vendors\mdi\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Guest\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Guest\vendors\tinymce\bower.json" />
+    <Content Include="Guest\vendors\tinymce\composer.json" />
+    <Content Include="Guest\vendors\tinymce\package.json" />
+    <Content Include="Guest\vendors\tinymce\readme.md" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="Guest\vendors\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Guest\vendors\typicons\LICENCE.md" />
+    <Content Include="Guest\vendors\typicons\typicons.eot" />
+    <Content Include="Guest\vendors\typicons\typicons.ttf" />
+    <Content Include="Guest\vendors\typicons\typicons.woff" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60714</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44375/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
